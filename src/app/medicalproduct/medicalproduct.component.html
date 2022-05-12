@@ -1,0 +1,29 @@
+<p>medicalproduct works!</p>
+
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>productId</th>
+            <th>productNmae</th>
+            <th>BrandName</th>
+            <th>price</th>
+            
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;">
+        
+            <td>{{product.id}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.brandName}}</td>
+            <td>{{product.price}}</td>
+            
+            <td><button type="button" (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button></td>
+            <td><a routerLink="/updatemedicals/{{product.id}}" routerLinkActive="active">Update</a></td>
+
+        </tr>
+    </tbody>
+</table>

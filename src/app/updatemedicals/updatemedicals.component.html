@@ -1,0 +1,25 @@
+<p>updatemedicals works!</p>
+<h2>Update medical</h2>
+<form (ngSubmit)="updateMedical()" *ngIf="med">
+    <div>
+        <label for="productName">productName:</label>
+        <input type="text" name="productName" [(ngModel)]="med.productName" placeholder="productNmae" required > 
+    </div>
+    <br>
+    <div>
+        <label for="brandName">brandName:</label>
+        <input type="text" name="brandType" [(ngModel)]="med.brandname" placeholder="brandName" required > 
+    </div>
+    <br>
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" name="price" [(ngModel)]="med.price"  placeholder="price" required > 
+    </div>
+    <br>
+    <div>
+        <label for="image">image:</label>
+        <input type="text" name="image" [(ngModel)]="med.image"  placeholder="image" required > 
+    </div>
+    <br>
+        <button type="submit">submit</button>
+</form>
